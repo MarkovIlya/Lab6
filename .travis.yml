@@ -4,4 +4,13 @@ puthon: 3.8
 script: 
   - cd PythonApplication1
   - pytest
-  - cd .. 
+  - cd ..
+deploy:
+  provider: releases
+  pre-release: true
+  api_key: $GITHUB_TOKEN
+  skip_cleanup: true
+  on:
+    repo: MarkovIlya/Lab6
+    branch: dev
+    tags: true

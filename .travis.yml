@@ -13,4 +13,4 @@ deploy:
   on:
     repo: MarkovIlya/Lab6
     branch: dev
-    tags: true
+    tags: false

@@ -3,7 +3,7 @@ puthon: 3.8
 script:
   echo Test and Build begin...
 import:
-- source: .travis/.pre-release.yml
+- source: .travis/pre-release.yml
   if: branch = dev
-- source: .travis/.release.yml
+- source: .travis/release.yml
   if: branch = master

@@ -1,16 +1,9 @@
-  
 language: python
 puthon: 3.8
-script: 
-  - cd PythonApplication1
-  - pytest
-  - cd ..
-deploy:
-  provider: releases
-  prerelease: true
-  pi_key: $GITHUB_TOKEN
-  skip_cleanup: true
-  on:
-    repo: MarkovIlya/Lab6
-    branch: dev
-    tags: false
+script:
+  echo Test and Build begin...
+import:
+- source: .travis/pre-release.yml
+  if: branch = dev
+- source: .travis/release.yml
+  if: branch = master

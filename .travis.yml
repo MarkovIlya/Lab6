@@ -1,7 +1,7 @@
-language: python
-puthon: 3.8
-script:
-  echo Test and Build begin...
+branches:
+  only:
+  - master
+  - dev
 import:
 - source: .travis/pre-release.yml
   if: branch = dev
